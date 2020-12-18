@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 class Hero:
-    def __init__(self):
+    def __init__(self, opit, lvl):
         self.positive_effects = []
         self.negative_effects = []
         self.stats = {
@@ -31,7 +31,7 @@ class Hero:
             print(goods.achievements)
         return 'МОИ ПОЗДРАВЛЕНИЯ!!!'
 
-class ObservableEngine(Engine):
+class ObservableEngine():
     def __init__(self):
         self.__subscribers = set()
 
@@ -67,4 +67,17 @@ class FullNotificationPrinter(AbstractObserver):
     def update(self, message):
         if message not in self.achievements:
             self.achievements.append(message)
+
+ach = ObservableEngine()
+goods = FullNotificationPrinter()
+Ann = Hero(0, 1)
+print(Ann.get_stats())
+print(Ann.lvl, 'УРОВЕНЬ')
+print(Ann.can())
+print(Ann.opit_up())
+print(Ann.lvl, 'УРОВЕНЬ')
+print(Ann.can())
+print(Ann.opit_up())
+print(Ann.can())
+
 
