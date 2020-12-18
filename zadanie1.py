@@ -25,7 +25,7 @@ class Hero:
     def get_stats(self):
         return self.stats.copy()
 
-    class AbstractEffect(Hero, ABC):
+class AbstractEffect(Hero, ABC):
     def __init__(self, base):
         self.base = base
 
@@ -122,4 +122,53 @@ class EvilEye(AbstractNegative):
     def get_negative_effects(self):
         return self.base.get_negative_effects() + ["EvilEye"]
 
+
 Filipp = Hero()
+print(Filipp.stats)
+print(Filipp.get_negative_effects())
+
+Event = Curse(Filipp)
+Event2 = EvilEye(Filipp)
+Event3 = Weakness(Filipp)
+Event4 = Blessing(Filipp)
+Event5 = Berserk(Filipp)
+
+print(Event.get_stats())
+print(Event.get_negative_effects())
+
+print(Event2.get_stats())
+print(Event2.get_negative_effects())
+
+print(Event3.get_stats())
+print(Event3.get_negative_effects())
+
+print(Event4.get_stats())
+print(Event4.get_positive_effects())
+
+print(Event5.get_stats())
+print(Event5.get_positive_effects())
+
+Ann = Hero()
+print(Ann.stats)
+print(Ann.get_negative_effects())
+
+Step = Curse(Ann)
+Step2 = EvilEye(Ann)
+Step3 = Weakness(Ann)
+Step4 = Blessing(Ann)
+Step5 = Berserk(Ann)
+
+print(Step.get_stats())
+print(Step.get_negative_effects())
+
+print(Step2.get_stats())
+print(Step2.get_negative_effects())
+
+print(Step3.get_stats())
+print(Event3.get_negative_effects())
+
+print(Step4.get_stats())
+print(Step4.get_positive_effects())
+
+print(Step5.get_stats())
+print(Step5.get_positive_effects())
