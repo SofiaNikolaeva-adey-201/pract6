@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fe70d054-2ef4-4456-a5ff-b44d0790c82b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>zad1.py</StartupFile>
+    <StartupFile>hello.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="hello.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="square.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="zad1.py">
       <SubType>Code</SubType>
     </Compile>
