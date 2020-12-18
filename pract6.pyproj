@@ -24,6 +24,9 @@
     <Compile Include="hello.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="zadanie2.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="zadanie1.py">
       <SubType>Code</SubType>
     </Compile>
