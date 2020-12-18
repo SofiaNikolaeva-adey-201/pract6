@@ -6,7 +6,7 @@ class Cylinder:
         side = pi * d * h
         return round(circle * 2 + side, 2)
     def __init__(self, diameter, high):
-        self.dia = diadiameter
+        self.dia = diameter
         self.h = high
         self.area = self.make_area(diameter, high)
 
